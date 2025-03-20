@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What affects the grades of students?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffb6c1; 
+        }
+
+        h1 { 
+            border: 3px solid white; 
+            padding: 10px; 
+            display: inline-block; 
+            border-radius: 10px; 
+            background-color: rgba(255, 255, 255, 0.3); 
+            color: black;
+        }
+        
+        h2 {
+            color: hotpink;
+        } 
+
+        nav {
+            margin-bottom: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff69b4; 
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background-color: #d14791;
+        }
+        
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Visible Title on Page -->
+    <h1>What affects the grades of students?</h1>
+
+    <nav>
+        <a href="{{ url_for('graphs') }}">Graphs</a>
+        <a href="{{ url_for('survey') }}">Survey</a>
+    </nav>
+
+    <div class="container">
+        <h2>Sleep</h2>
+        <p>Many students sacrifice their sleep without even realizing the effects it has on students and their overall performance in school.</p>
+        
+        <h3>Why is sleep important?</h3>
+        <ul>
+            <li>Good sleep can decrease mood swings</li>
+            <li>Increase productivity</li>
+            <li>Increase mental health</li>
+            <li>Is essential for a good memory</li>
+        </ul>
+        <p>A good rest is important as it allows the brain to reset.</p>
+
+        <h3>Sleep Deprivation</h3>
+        <p>Sleep deprivation is very serious and affects many young people.</p>
+        <p>Sleep deprivation is "the situation or condition of suffering from a lack of sleep" according to the Oxford Dictionary and can severely affect the mental health of students and how they perform in school.</p>
+        
+        <h4>The symptoms of Sleep deprivation are as follows:</h4>
+        <ul>
+            <li>Daytime drowsiness</li>
+            <li>Unable to concentrate</li>	
+            <li>Memory problems</li>
+            <li>Poor school performance</li>
+            <li>Problems with impulse control</li>
+        </ul>
+
+        <br>
+
+        <h2>Resources of Students</h2>
+        <p>While sleep does affect a student's overall performance, there are other overlooked factors, such as the resources available to a student.</p>
+        <p>Poverty affects students early on in their learning. There is an evident gap between well-off people and those who aren't. Especially in school, as studies have proven in Ireland, students from impoverished families test the lowest in maths and reading.</p>
+        
+        <p>This is simply because poorer students are less likely to:</p>
+        <ul>
+            <li>Do grinds classes as they cost money</li>
+            <li>Go to the library</li>
+            <li>Spend time studying after school as their families are usually very dependent on them</li>
+            <li>Be attentive in class due to hunger or worrying about family members</li>
+        </ul>
+
+        <h2>Attendance in school</h2>
+        <p>Students often disregard school attendance, but it hugely impacts how well students do in school.</p>
+        <p>According to 'The Irish Examiner': Children in second class in 2023, who would have experienced COVID school closures while in junior infants, demonstrated a higher level of worry and anxiety compared to those who attended second class in 2019.</p>
+        <p>This clearly shows us that not being in school for a long time can affect how students feel about school and studying.</p>
+        
+        <p>Other effects of not attending school are:</p>
+        <ul>
+            <li>Social Isolation</li>
+            <li>Falling behind in grades</li>
+            <li>Stress and anxiety</li>
+        </ul>
+    </div>
+
+</body>
+</html>
