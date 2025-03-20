@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Are you Sleep Deprived?</title>
+	<style>
+		body {background-color: lightpink;}
+		title{ color : hotpink }
+		.container { width: 80%; margin: auto; padding: 20px; border: 10px solid #ddd; border-radius: 10px background-color:  white; }
+        	button { background: hotpink; color: white; padding: 10px; border: none; cursor: pointer; }
+       		button:hover { background: #ff69b4; }
+		
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Find out if you are sleep deprived</h2>
+        <label for="sleepHours">How many hours do you sleep?</label><br>
+        <input type="number" id="sleepHours" min="0" required><br><br>
+
+        <label>Do you feel drowsy during the day?</label><br>
+        <input type="radio" name="drowsy" value="yes"> Yes
+        <input type="radio" name="drowsy" value="no"> No<br><br>
+
+        <label>Do you have trouble foucusing in classes?</label><br>
+        <input type="radio" name="focus" value="yes"> Yes
+        <input type="radio" name="focus" value="no"> No<br><br>
+
+        <button onclick="checkSleep()">Check</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function checkSleep() {
+            let sleepHours = document.getElementById("sleepHours").value;
+            let drowsy = document.querySelector('input[name="drowsy"]:checked');
+            let focus = document.querySelector('input[name="focus"]:checked');
+            let result = document.getElementById("result");
+
+            if (!sleepHours || !drowsy || !focus) {
+                result.innerHTML = " Please answer all questions!";
+                result.style.color = "red";
+                return;
+            }
+
+            if (sleepHours < 7 && drowsy.value === "yes" && focus.value === "yes") {
+                result.innerHTML = " You are sleep-deprived! Try to get more rest!! ";
+                result.style.color = "red";
+            } else {
+                result.innerHTML =  "You are not sleep-deprived :).";
+                result.style.color = "green";
+            }
+        }
+    </script>
+
+</body>
+</html>
